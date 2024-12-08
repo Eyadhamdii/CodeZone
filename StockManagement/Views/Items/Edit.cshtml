@@ -1,0 +1,14 @@
+﻿@model Common.UpdateStoreDTO
+
+<h2>Edit Item</h2>
+
+<form asp-action="Edit" method="post">
+    <div class="form-group">
+        <label for="Name">Item Name</label>
+        <input type="text" class="form-control" id="Name" name="Name" value="@Model.Name" required />
+    </div>
+
+    <!-- You can add other fields here based on the properties of UpdateStoreCommand -->
+
+    <button type="submit" class="btn btn-primary">Update Item</button>
+</form>

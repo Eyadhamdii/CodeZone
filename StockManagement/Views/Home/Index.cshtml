@@ -1,0 +1,64 @@
+﻿@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<div class="container my-5">
+    <div class="text-center mb-5">
+        <h1 class="display-4">Stock Management Dashboard</h1>
+        <p class="lead">Manage stores, items, and stock levels efficiently.</p>
+    </div>
+
+    <div class="row justify-content-center">
+        <!-- Manage Stores -->
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card shadow-lg border-0">
+                <div class="card-body text-center">
+                    <div class="mb-3">
+                        <i class="fas fa-store fa-3x text-primary"></i>
+                    </div>
+                    <h5 class="card-title">Manage Stores</h5>
+                    <p class="card-text">Add, edit, or delete stores in your system.</p>
+                    <a href="@Url.Action("Index", "Stores")" class="btn btn-outline-primary btn-block">
+                        <i class="fas fa-arrow-right"></i> Go to Stores
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Manage Items -->
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card shadow-lg border-0">
+                <div class="card-body text-center">
+                    <div class="mb-3">
+                        <i class="fas fa-box fa-3x text-success"></i>
+                    </div>
+                    <h5 class="card-title">Manage Items</h5>
+                    <p class="card-text">Add, edit, or delete items in your inventory.</p>
+                    <a href="@Url.Action("Index", "Items")" class="btn btn-outline-success btn-block">
+                        <i class="fas fa-arrow-right"></i> Go to Items
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Increase Stock -->
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card shadow-lg border-0">
+                <div class="card-body text-center">
+                    <div class="mb-3">
+                        <i class="fas fa-chart-line fa-3x text-warning"></i>
+                    </div>
+                    <h5 class="card-title">Increase Stock</h5>
+                    <p class="card-text">Update stock levels for items in specific stores.</p>
+                    <a href="@Url.Action("IncreaseStock", "Stock")" class="btn btn-outline-warning btn-block">
+                        <i class="fas fa-arrow-right"></i> Go to Stock Management
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Add Font Awesome for Icons -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet" />

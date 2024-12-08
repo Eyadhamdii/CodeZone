@@ -1,0 +1,33 @@
+﻿@using Domain.Entities
+@model IEnumerable<Item>
+@{
+    ViewBag.Title = "Items";
+}
+
+<h2>Items</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Name</td>
+                <td>
+                    <a href="@Url.Action("Edit", new { id = item.Id })">Edit</a> |
+                    <form action="@Url.Action("Delete", new { id = item.Id })" method="post" style="display:inline;">
+                        @Html.AntiForgeryToken()
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a href="@Url.Action("Create")" class="btn btn-primary">Create New Item</a>
